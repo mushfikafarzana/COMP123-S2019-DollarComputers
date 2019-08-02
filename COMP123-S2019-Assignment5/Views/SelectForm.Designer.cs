@@ -146,7 +146,7 @@
             // 
             // SelectionLabel
             // 
-            this.SelectionLabel.Location = new System.Drawing.Point(31, 470);
+            this.SelectionLabel.Location = new System.Drawing.Point(12, 470);
             this.SelectionLabel.Name = "SelectionLabel";
             this.SelectionLabel.Size = new System.Drawing.Size(120, 26);
             this.SelectionLabel.TabIndex = 2;
@@ -158,16 +158,16 @@
             this.SelectionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.SelectionTextBox.Location = new System.Drawing.Point(157, 470);
+            this.SelectionTextBox.Location = new System.Drawing.Point(127, 470);
             this.SelectionTextBox.Name = "SelectionTextBox";
             this.SelectionTextBox.ReadOnly = true;
-            this.SelectionTextBox.Size = new System.Drawing.Size(420, 26);
+            this.SelectionTextBox.Size = new System.Drawing.Size(464, 26);
             this.SelectionTextBox.TabIndex = 3;
             this.SelectionTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // CancelButton
             // 
-            this.CancelButton.Location = new System.Drawing.Point(597, 470);
+            this.CancelButton.Location = new System.Drawing.Point(615, 470);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(75, 26);
             this.CancelButton.TabIndex = 4;

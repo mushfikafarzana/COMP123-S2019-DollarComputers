@@ -21,10 +21,11 @@ namespace COMP123_S2019_Assignment5.Views
 
         private void SelectForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dollarComputersDataSet.products' table. You can move, or remove it, as needed.
-            this.productsTableAdapter.Fill(this.dollarComputersDataSet.products);
-            // TODO: This line of code loads data into the 'dollarComputersDataSet.products' table. You can move, or remove it, as needed.
-            this.productsTableAdapter.Fill(this.dollarComputersDataSet.products);
+            //// TODO: This line of code loads data into the 'dollarComputersDataSet.products' table. You can move, or remove it, as needed.
+            //this.productsTableAdapter.Fill(this.dollarComputersDataSet.products);
+            //// TODO: This line of code loads data into the 'dollarComputersDataSet.products' table. You can move, or remove it, as needed.
+            //this.productsTableAdapter.Fill(this.dollarComputersDataSet.products);
+
             if (!HasLoadedDataSource())
             {
                 MessageBox.Show("DataSource Not Loaded", "ERROR", 
@@ -62,7 +63,24 @@ namespace COMP123_S2019_Assignment5.Views
 
         private void ProductDataGridView_SelectionChanged(object sender, EventArgs e)
         {
-           
+            if (ProductDataGridView.CurrentCell!=null)
+            {
+                var rowIndex = ProductDataGridView.CurrentCell.RowIndex;
+                var rows = ProductDataGridView.Rows;
+                var columnCount = ProductDataGridView.ColumnCount;
+                var cells = rows[rowIndex].Cells;
+
+                rows[rowIndex].Selected = true;
+
+                string outputString = string.Empty;
+                for (int index = 1; index < 4; index++)
+                {
+                    outputString += cells[index].Value.ToString() + " ";
+                }
+
+                SelectionTextBox.Text = outputString;
+            }
+
         }
     }
 }

@@ -140,10 +140,10 @@
     <value>185, 17</value>
   </metadata>
   <metadata name="TotalLine.Bounds" type="System.Drawing.Rectangle, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>506, 325, 348, 0</value>
+    <value>16, 83, 348, 0</value>
   </metadata>
   <metadata name="TotalLine.Location" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>506, 325</value>
+    <value>16, 83</value>
   </metadata>
   <metadata name="TotalLine.Size" type="System.Drawing.Size, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>348, 0</value>

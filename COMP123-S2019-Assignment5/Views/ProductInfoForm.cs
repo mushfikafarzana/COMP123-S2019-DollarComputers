@@ -33,10 +33,5 @@ namespace COMP123_S2019_Assignment5.Views
             Program.orderForm.Show();
             Program.selectForm.Hide();
         }
-
-        private void ProductIDLabel_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
