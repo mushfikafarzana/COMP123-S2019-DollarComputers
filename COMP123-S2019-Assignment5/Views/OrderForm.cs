@@ -43,7 +43,7 @@ namespace COMP123_S2019_Assignment5.Views
 
         private void FinishButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Thank You for shopping with us. Your order will be processed in 7-10 business days.", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Thank You for shopping with Dollar Computers.\n Your order will be processed in 7-10 business days.", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

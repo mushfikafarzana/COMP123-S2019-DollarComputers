@@ -90,7 +90,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.StartFormPictureBox.BackColor = System.Drawing.Color.Black;
-            this.StartFormPictureBox.BackgroundImage = global::COMP123_S2019_Assignment5.Properties.Resources.laptop_icon_2;
+            this.StartFormPictureBox.BackgroundImage = global::COMP123_S2019_Assignment5.Properties.Resources.laptop;
             this.StartFormPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.StartFormPictureBox.Location = new System.Drawing.Point(312, 116);
             this.StartFormPictureBox.Name = "StartFormPictureBox";

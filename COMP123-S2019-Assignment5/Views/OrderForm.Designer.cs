@@ -49,11 +49,11 @@
             this.SystemComponentsLabel = new System.Windows.Forms.Label();
             this.ConditionLabel = new System.Windows.Forms.Label();
             this.ConditionDataLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.ManufacturerDataLabel = new System.Windows.Forms.Label();
             this.ManufacturerLabel = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.ModelDataLabel = new System.Windows.Forms.Label();
             this.ModelLabel = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.PlatformDataLabel = new System.Windows.Forms.Label();
             this.PlatformLabel = new System.Windows.Forms.Label();
             this.LCDSizeLabel = new System.Windows.Forms.Label();
             this.HDDLabel = new System.Windows.Forms.Label();
@@ -252,14 +252,14 @@
             this.ConditionDataLabel.TabIndex = 7;
             this.ConditionDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label1
+            // ManufacturerDataLabel
             // 
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(125, 111);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 24);
-            this.label1.TabIndex = 9;
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ManufacturerDataLabel.BackColor = System.Drawing.Color.White;
+            this.ManufacturerDataLabel.Location = new System.Drawing.Point(125, 111);
+            this.ManufacturerDataLabel.Name = "ManufacturerDataLabel";
+            this.ManufacturerDataLabel.Size = new System.Drawing.Size(132, 24);
+            this.ManufacturerDataLabel.TabIndex = 9;
+            this.ManufacturerDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ManufacturerLabel
             // 
@@ -270,14 +270,14 @@
             this.ManufacturerLabel.Text = "Manufacturer";
             this.ManufacturerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label3
+            // ModelDataLabel
             // 
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(339, 111);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 24);
-            this.label3.TabIndex = 11;
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ModelDataLabel.BackColor = System.Drawing.Color.White;
+            this.ModelDataLabel.Location = new System.Drawing.Point(339, 111);
+            this.ModelDataLabel.Name = "ModelDataLabel";
+            this.ModelDataLabel.Size = new System.Drawing.Size(147, 24);
+            this.ModelDataLabel.TabIndex = 11;
+            this.ModelDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ModelLabel
             // 
@@ -288,14 +288,14 @@
             this.ModelLabel.Text = "Model";
             this.ModelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label5
+            // PlatformDataLabel
             // 
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(339, 75);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(147, 24);
-            this.label5.TabIndex = 13;
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.PlatformDataLabel.BackColor = System.Drawing.Color.White;
+            this.PlatformDataLabel.Location = new System.Drawing.Point(339, 75);
+            this.PlatformDataLabel.Name = "PlatformDataLabel";
+            this.PlatformDataLabel.Size = new System.Drawing.Size(147, 24);
+            this.PlatformDataLabel.TabIndex = 13;
+            this.PlatformDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // PlatformLabel
             // 
@@ -591,11 +591,11 @@
             this.Controls.Add(this.CPUTypeLabel);
             this.Controls.Add(this.GPULabel);
             this.Controls.Add(this.CPUBrandLabel);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.PlatformDataLabel);
             this.Controls.Add(this.PlatformLabel);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.ModelDataLabel);
             this.Controls.Add(this.ModelLabel);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ManufacturerDataLabel);
             this.Controls.Add(this.ManufacturerLabel);
             this.Controls.Add(this.ConditionDataLabel);
             this.Controls.Add(this.ConditionLabel);
@@ -637,11 +637,11 @@
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.Button FinishButton;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label PlatformDataLabel;
         private System.Windows.Forms.Label PlatformLabel;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label ModelDataLabel;
         private System.Windows.Forms.Label ModelLabel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label ManufacturerDataLabel;
         private System.Windows.Forms.Label ManufacturerLabel;
         private System.Windows.Forms.Label ConditionDataLabel;
         private System.Windows.Forms.Label ConditionLabel;

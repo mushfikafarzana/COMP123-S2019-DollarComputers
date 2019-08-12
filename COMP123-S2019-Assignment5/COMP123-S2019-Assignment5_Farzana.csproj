@@ -173,5 +173,8 @@
   <ItemGroup>
     <None Include="Resources\481px-Gold_coin_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laptop.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

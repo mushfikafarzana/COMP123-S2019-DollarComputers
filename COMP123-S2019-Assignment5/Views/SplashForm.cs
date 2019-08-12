@@ -8,6 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*Assignment 5: Dollar Computers
+ * Author: Mushfika Farzana
+ * ID#: 301051702
+ * Version: 1.2 Finalized Splash Screen, Start Form and About Form functionalities for Dollar Computers
+ * Modified on: August 10, 2019
+ */
+
 namespace COMP123_S2019_Assignment5.Views
 {
     public partial class SplashForm : Form
