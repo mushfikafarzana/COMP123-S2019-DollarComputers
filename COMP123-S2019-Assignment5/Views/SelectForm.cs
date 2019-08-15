@@ -10,6 +10,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*Assignment 5: Dollar Computers
+ * Author: Mushfika Farzana
+ * ID#: 301051702
+ * Version: 1.4 - Added Select Form functionalities for Dollar Computers
+ * Modified on: August 14, 2019
+ */
+
 namespace COMP123_S2019_Assignment5.Views
 {
     public partial class SelectForm : Form
@@ -63,24 +70,20 @@ namespace COMP123_S2019_Assignment5.Views
 
         private void ProductDataGridView_SelectionChanged(object sender, EventArgs e)
         {
-            if (ProductDataGridView.CurrentCell!=null)
+            if (ProductDataGridView.CurrentCell != null)
             {
                 var rowIndex = ProductDataGridView.CurrentCell.RowIndex;
-                var rows = ProductDataGridView.Rows;
-                var columnCount = ProductDataGridView.ColumnCount;
-                var cells = rows[rowIndex].Cells;
 
-                rows[rowIndex].Selected = true;
+                var currentRow = ProductDataGridView.Rows[rowIndex];
 
-                string outputString = string.Empty;
-                for (int index = 1; index < 4; index++)
-                {
-                    outputString += cells[index].Value.ToString() + " ";
-                }
+                var cost = ProductDataGridView.CurrentRow.Cells[1].Value.ToString();
+                var manufacturer = ProductDataGridView.CurrentRow.Cells[2].Value.ToString();
+                var model = ProductDataGridView.CurrentRow.Cells[3].Value.ToString();
+
+                string outputString = manufacturer + "  " + model + $"  {cost:C2}";
 
                 SelectionTextBox.Text = outputString;
             }
-
         }
     }
 }
