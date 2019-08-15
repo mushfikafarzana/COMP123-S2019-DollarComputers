@@ -263,7 +263,7 @@
             this.ConditionLabel.Name = "ConditionLabel";
             this.ConditionLabel.Size = new System.Drawing.Size(110, 22);
             this.ConditionLabel.TabIndex = 3;
-            this.ConditionLabel.Text = "Condition";
+            this.ConditionLabel.Text = "Condition:";
             this.ConditionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ConditionDataLabel
