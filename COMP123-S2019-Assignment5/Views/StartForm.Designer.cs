@@ -39,35 +39,41 @@
             // 
             // StartANewOrderButton
             // 
+            this.StartANewOrderButton.BackColor = System.Drawing.Color.Navy;
             this.StartANewOrderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StartANewOrderButton.Location = new System.Drawing.Point(312, 276);
+            this.StartANewOrderButton.ForeColor = System.Drawing.Color.White;
+            this.StartANewOrderButton.Location = new System.Drawing.Point(312, 273);
             this.StartANewOrderButton.Name = "StartANewOrderButton";
-            this.StartANewOrderButton.Size = new System.Drawing.Size(167, 28);
+            this.StartANewOrderButton.Size = new System.Drawing.Size(167, 38);
             this.StartANewOrderButton.TabIndex = 0;
             this.StartANewOrderButton.Text = "Start a New Order";
-            this.StartANewOrderButton.UseVisualStyleBackColor = true;
+            this.StartANewOrderButton.UseVisualStyleBackColor = false;
             this.StartANewOrderButton.Click += new System.EventHandler(this.StartANewOrderButton_Click);
             // 
             // LoadASavedOrderButton
             // 
+            this.LoadASavedOrderButton.BackColor = System.Drawing.Color.DarkGreen;
             this.LoadASavedOrderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoadASavedOrderButton.ForeColor = System.Drawing.Color.White;
             this.LoadASavedOrderButton.Location = new System.Drawing.Point(312, 338);
             this.LoadASavedOrderButton.Name = "LoadASavedOrderButton";
-            this.LoadASavedOrderButton.Size = new System.Drawing.Size(167, 28);
+            this.LoadASavedOrderButton.Size = new System.Drawing.Size(167, 39);
             this.LoadASavedOrderButton.TabIndex = 0;
             this.LoadASavedOrderButton.Text = "Open a Saved Order";
-            this.LoadASavedOrderButton.UseVisualStyleBackColor = true;
+            this.LoadASavedOrderButton.UseVisualStyleBackColor = false;
             this.LoadASavedOrderButton.Click += new System.EventHandler(this.LoadASavedOrderButton_Click);
             // 
             // ExitButton
             // 
+            this.ExitButton.BackColor = System.Drawing.Color.Silver;
             this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitButton.ForeColor = System.Drawing.Color.MidnightBlue;
             this.ExitButton.Location = new System.Drawing.Point(341, 396);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(97, 28);
+            this.ExitButton.Size = new System.Drawing.Size(97, 34);
             this.ExitButton.TabIndex = 1;
             this.ExitButton.Text = "Exit";
-            this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.UseVisualStyleBackColor = false;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // StartFormOpenFileDialog
@@ -92,9 +98,9 @@
             this.StartFormPictureBox.BackColor = System.Drawing.Color.Black;
             this.StartFormPictureBox.BackgroundImage = global::COMP123_S2019_Assignment5.Properties.Resources.laptop;
             this.StartFormPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.StartFormPictureBox.Location = new System.Drawing.Point(312, 116);
+            this.StartFormPictureBox.Location = new System.Drawing.Point(273, 116);
             this.StartFormPictureBox.Name = "StartFormPictureBox";
-            this.StartFormPictureBox.Size = new System.Drawing.Size(167, 115);
+            this.StartFormPictureBox.Size = new System.Drawing.Size(228, 127);
             this.StartFormPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.StartFormPictureBox.TabIndex = 3;
             this.StartFormPictureBox.TabStop = false;

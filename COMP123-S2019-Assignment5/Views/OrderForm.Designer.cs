@@ -197,32 +197,35 @@
             // 
             // CancelButton
             // 
+            this.CancelButton.BackColor = System.Drawing.Color.AliceBlue;
             this.CancelButton.Location = new System.Drawing.Point(675, 480);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(94, 36);
             this.CancelButton.TabIndex = 2;
             this.CancelButton.Text = "Cancel";
-            this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.UseVisualStyleBackColor = false;
             this.CancelButton.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // BackButton
             // 
+            this.BackButton.BackColor = System.Drawing.Color.AliceBlue;
             this.BackButton.Location = new System.Drawing.Point(565, 479);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(85, 37);
             this.BackButton.TabIndex = 3;
             this.BackButton.Text = "Back";
-            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.UseVisualStyleBackColor = false;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // FinishButton
             // 
+            this.FinishButton.BackColor = System.Drawing.Color.AliceBlue;
             this.FinishButton.Location = new System.Drawing.Point(791, 481);
             this.FinishButton.Name = "FinishButton";
             this.FinishButton.Size = new System.Drawing.Size(81, 35);
             this.FinishButton.TabIndex = 4;
             this.FinishButton.Text = "Finish";
-            this.FinishButton.UseVisualStyleBackColor = true;
+            this.FinishButton.UseVisualStyleBackColor = false;
             this.FinishButton.Click += new System.EventHandler(this.FinishButton_Click);
             // 
             // SystemComponentsLabel

@@ -68,13 +68,15 @@
             this.CPUSpeedLabel = new System.Windows.Forms.Label();
             this.CPUSpeedDataLabel = new System.Windows.Forms.Label();
             this.LCDSizeLabel = new System.Windows.Forms.Label();
-            this.LCDSizrDataLabel = new System.Windows.Forms.Label();
+            this.LCDSizeDataLabel = new System.Windows.Forms.Label();
             this.OSLabel = new System.Windows.Forms.Label();
             this.OSDataLabel = new System.Windows.Forms.Label();
             this.ModelLabel = new System.Windows.Forms.Label();
             this.ModelDataLabel = new System.Windows.Forms.Label();
             this.ProductInfoGroupBox = new System.Windows.Forms.GroupBox();
             this.TechSpecsGroupBox = new System.Windows.Forms.GroupBox();
+            this.ProductInfoOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.ProductInfoSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.ProductInfoFormMenuStrip.SuspendLayout();
             this.ProductInfoGroupBox.SuspendLayout();
             this.TechSpecsGroupBox.SuspendLayout();
@@ -109,13 +111,14 @@
             this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openToolStripMenuItem.Text = "&Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(143, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(177, 6);
             // 
             // saveToolStripMenuItem
             // 
@@ -123,14 +126,15 @@
             this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveToolStripMenuItem.Text = "&Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.CancelButton_Click);
             // 
@@ -152,32 +156,35 @@
             // 
             // SelectionButton
             // 
+            this.SelectionButton.BackColor = System.Drawing.Color.AliceBlue;
             this.SelectionButton.Location = new System.Drawing.Point(346, 490);
             this.SelectionButton.Name = "SelectionButton";
             this.SelectionButton.Size = new System.Drawing.Size(195, 32);
             this.SelectionButton.TabIndex = 1;
             this.SelectionButton.Text = "Select Another Product";
-            this.SelectionButton.UseVisualStyleBackColor = true;
+            this.SelectionButton.UseVisualStyleBackColor = false;
             this.SelectionButton.Click += new System.EventHandler(this.SelectionButton_Click);
             // 
             // CancelButton
             // 
+            this.CancelButton.BackColor = System.Drawing.Color.AliceBlue;
             this.CancelButton.Location = new System.Drawing.Point(564, 490);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(75, 32);
             this.CancelButton.TabIndex = 1;
             this.CancelButton.Text = "Cancel";
-            this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.UseVisualStyleBackColor = false;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // NextButton
             // 
+            this.NextButton.BackColor = System.Drawing.Color.AliceBlue;
             this.NextButton.Location = new System.Drawing.Point(667, 490);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(75, 32);
             this.NextButton.TabIndex = 1;
             this.NextButton.Text = "Next";
-            this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.UseVisualStyleBackColor = false;
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // SelectionLabel
@@ -263,7 +270,7 @@
             this.ConditionLabel.Name = "ConditionLabel";
             this.ConditionLabel.Size = new System.Drawing.Size(110, 22);
             this.ConditionLabel.TabIndex = 3;
-            this.ConditionLabel.Text = "Condition:";
+            this.ConditionLabel.Text = "Condition";
             this.ConditionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ConditionDataLabel
@@ -419,13 +426,13 @@
             this.LCDSizeLabel.Text = "LCD Size";
             this.LCDSizeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // LCDSizrDataLabel
+            // LCDSizeDataLabel
             // 
-            this.LCDSizrDataLabel.BackColor = System.Drawing.Color.White;
-            this.LCDSizrDataLabel.Location = new System.Drawing.Point(365, 39);
-            this.LCDSizrDataLabel.Name = "LCDSizrDataLabel";
-            this.LCDSizrDataLabel.Size = new System.Drawing.Size(126, 22);
-            this.LCDSizrDataLabel.TabIndex = 4;
+            this.LCDSizeDataLabel.BackColor = System.Drawing.Color.White;
+            this.LCDSizeDataLabel.Location = new System.Drawing.Point(365, 39);
+            this.LCDSizeDataLabel.Name = "LCDSizeDataLabel";
+            this.LCDSizeDataLabel.Size = new System.Drawing.Size(126, 22);
+            this.LCDSizeDataLabel.TabIndex = 4;
             // 
             // OSLabel
             // 
@@ -480,7 +487,7 @@
             // 
             // TechSpecsGroupBox
             // 
-            this.TechSpecsGroupBox.Controls.Add(this.LCDSizrDataLabel);
+            this.TechSpecsGroupBox.Controls.Add(this.LCDSizeDataLabel);
             this.TechSpecsGroupBox.Controls.Add(this.CPUBrandLabel);
             this.TechSpecsGroupBox.Controls.Add(this.CPUBrandDataLabel);
             this.TechSpecsGroupBox.Controls.Add(this.HDDDataLabel);
@@ -504,6 +511,10 @@
             this.TechSpecsGroupBox.TabIndex = 8;
             this.TechSpecsGroupBox.TabStop = false;
             this.TechSpecsGroupBox.Text = "Tech Specs";
+            // 
+            // ProductInfoOpenFileDialog
+            // 
+            this.ProductInfoOpenFileDialog.FileName = "openFileDialog1";
             // 
             // ProductInfoForm
             // 
@@ -530,6 +541,8 @@
             this.Name = "ProductInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product Info Form";
+            this.Activated += new System.EventHandler(this.ProductInfoForm_Activated);
+            this.Load += new System.EventHandler(this.ProductInfoForm_Load);
             this.ProductInfoFormMenuStrip.ResumeLayout(false);
             this.ProductInfoFormMenuStrip.PerformLayout();
             this.ProductInfoGroupBox.ResumeLayout(false);
@@ -580,12 +593,14 @@
         private System.Windows.Forms.Label CPUSpeedLabel;
         private System.Windows.Forms.Label CPUSpeedDataLabel;
         private System.Windows.Forms.Label LCDSizeLabel;
-        private System.Windows.Forms.Label LCDSizrDataLabel;
+        private System.Windows.Forms.Label LCDSizeDataLabel;
         private System.Windows.Forms.Label OSLabel;
         private System.Windows.Forms.Label OSDataLabel;
         private System.Windows.Forms.Label ModelLabel;
         private System.Windows.Forms.Label ModelDataLabel;
         private System.Windows.Forms.GroupBox ProductInfoGroupBox;
         private System.Windows.Forms.GroupBox TechSpecsGroupBox;
+        private System.Windows.Forms.OpenFileDialog ProductInfoOpenFileDialog;
+        private System.Windows.Forms.SaveFileDialog ProductInfoSaveFileDialog;
     }
 }
