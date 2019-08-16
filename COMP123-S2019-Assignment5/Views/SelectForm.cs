@@ -102,11 +102,11 @@ namespace COMP123_S2019_Assignment5.Views
 
                 var currentRow = ProductDataGridView.Rows[rowIndex];
 
-                var cost = ProductDataGridView.CurrentRow.Cells[1].Value.ToString();
+                var cost = ((decimal)ProductDataGridView.CurrentRow.Cells[1].Value).ToString("C");
                 var manufacturer = ProductDataGridView.CurrentRow.Cells[2].Value.ToString();
                 var model = ProductDataGridView.CurrentRow.Cells[3].Value.ToString();
 
-                string outputString = manufacturer + "  " + model + $"  {cost:C2}";
+                string outputString = manufacturer + "  " + model + $"  Price: {cost}";
 
                 SelectionTextBox.Text = outputString;
             }

@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>dollar_sign_png_logo_15_G0v_icon.ico</ApplicationIcon>
+    <ApplicationIcon>ProjectIcon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -69,6 +69,11 @@
     </Compile>
     <Compile Include="Models\DollarComputersContext.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Views\AboutForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,14 +114,9 @@
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Views\AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,22 +165,15 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\images.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Picture1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\laptop-icon-2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\481px-Gold_coin_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\laptop.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="dollar_sign_png_logo_15_G0v_icon.ico" />
+    <Content Include="ProjectIcon.ico" />
+    <Content Include="Resources\ProjectIcon.ico" />
+    <None Include="Resources\Desktop1.png" />
+    <None Include="Resources\Desktop.png" />
+    <None Include="Resources\all-laptops.jpg" />
+    <None Include="Resources\Laptop.jpg" />
+    <None Include="Resources\dims1.jpg" />
+    <None Include="Resources\dims.jpg" />
+    <None Include="Resources\dims %281%29.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

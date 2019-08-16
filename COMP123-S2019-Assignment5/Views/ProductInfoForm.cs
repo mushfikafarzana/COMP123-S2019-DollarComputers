@@ -70,7 +70,7 @@ namespace COMP123_S2019_Assignment5.Views
         }
 
         /// <summary>
-        /// this is the event handler for the ProductInfoForm's Activated event
+        /// this is the event handler for the ProductInfoForm Activated event
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -175,7 +175,7 @@ namespace COMP123_S2019_Assignment5.Views
         }
 
         // Method that opens a OpenFileDialog box
-        private void OpenFileDialog()
+        public void OpenFileDialog()
         {
             // configure the file dialog
             ProductInfoOpenFileDialog.FileName = "Product.txt";
@@ -183,7 +183,7 @@ namespace COMP123_S2019_Assignment5.Views
             ProductInfoOpenFileDialog.Filter = "Text Files (*.txt)|*.txt| All Files (*.*)|*.*";
 
             // open the file dialog
-            var result = ProductInfoSaveFileDialog.ShowDialog();
+            var result = ProductInfoOpenFileDialog.ShowDialog();
             if (result != DialogResult.Cancel)
             {
                 try
@@ -192,10 +192,10 @@ namespace COMP123_S2019_Assignment5.Views
                     using (StreamReader inputStream = new StreamReader(
                         File.Open(ProductInfoOpenFileDialog.FileName, FileMode.Open)))
                     {
-                        // Read stuff into the Product class
+                        // Read stuff from the file into the Product class
                         Program.product.productID = short.Parse(inputStream.ReadLine());
                         Program.product.condition = inputStream.ReadLine();
-                        Program.product.cost = int.Parse(inputStream.ReadLine());
+                        Program.product.cost = decimal.Parse(inputStream.ReadLine());
                         Program.product.platform = inputStream.ReadLine();
                         Program.product.OS = inputStream.ReadLine();
                         Program.product.manufacturer = inputStream.ReadLine();

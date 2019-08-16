@@ -43,7 +43,7 @@ namespace COMP123_S2019_Assignment5.Views
         private void LoadASavedOrderButton_Click(object sender, EventArgs e)
         {
             Program.productInfoForm.Show();
-            //Program.productInfoForm.OpenFileDialog();
+            Program.productInfoForm.OpenFileDialog();
 
             this.Hide();
         }

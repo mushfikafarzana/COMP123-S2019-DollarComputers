@@ -54,7 +54,7 @@ namespace COMP123_S2019_Assignment5.Views
         }
 
         /// <summary>
-        /// this is the event handler for the aboutToolStripMenuItem's Click event
+        /// this is the event handler for the AboutToolStripMenuItem's Click event
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -87,12 +87,21 @@ namespace COMP123_S2019_Assignment5.Views
             CPUSpeedDataLabel.Text = Program.product.CPU_speed;
             WebcamDataLabel.Text = Program.product.webcam;
 
-            //Calculating Sales Tax
-
+            // Calculating Sales Tax
             SalesTaxDataLabel.Text = ((decimal)(Program.product.cost * SALES_TAX)).ToString("C");
 
-            //Calculating Total Price
+            // Calculating Total Price
             TotalDataLabel.Text = ((decimal)(Program.product.cost * (1 + SALES_TAX))).ToString("C");
+
+            // Setting image for the Computer Picture Box
+            if (Program.product.platform == "Laptop")
+            {
+                ComputerPictureBox.Image = Properties.Resources.laptop;
+            }
+            else
+            {
+                ComputerPictureBox.Image = Properties.Resources.Desktop;
+            }
         }
 
         /// <summary>

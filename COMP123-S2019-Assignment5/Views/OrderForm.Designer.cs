@@ -81,12 +81,12 @@
             this.OSDataLabel = new System.Windows.Forms.Label();
             this.SalesTaxDataLabel = new System.Windows.Forms.Label();
             this.TotalDataLabel = new System.Windows.Forms.Label();
-            this.ComputerPictureBox = new System.Windows.Forms.PictureBox();
             this.PriceGroupBox = new System.Windows.Forms.GroupBox();
             this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.ComputerPictureBox = new System.Windows.Forms.PictureBox();
             this.OrderFormMenuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ComputerPictureBox)).BeginInit();
             this.PriceGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ComputerPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // OrderFormMenuStrip
@@ -530,15 +530,6 @@
             this.TotalDataLabel.Size = new System.Drawing.Size(156, 22);
             this.TotalDataLabel.TabIndex = 41;
             // 
-            // ComputerPictureBox
-            // 
-            this.ComputerPictureBox.Enabled = false;
-            this.ComputerPictureBox.Location = new System.Drawing.Point(501, 75);
-            this.ComputerPictureBox.Name = "ComputerPictureBox";
-            this.ComputerPictureBox.Size = new System.Drawing.Size(199, 140);
-            this.ComputerPictureBox.TabIndex = 25;
-            this.ComputerPictureBox.TabStop = false;
-            // 
             // PriceGroupBox
             // 
             this.PriceGroupBox.Controls.Add(this.PriceLabel);
@@ -565,6 +556,17 @@
             this.shapeContainer2.Size = new System.Drawing.Size(370, 134);
             this.shapeContainer2.TabIndex = 42;
             this.shapeContainer2.TabStop = false;
+            // 
+            // ComputerPictureBox
+            // 
+            this.ComputerPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ComputerPictureBox.Enabled = false;
+            this.ComputerPictureBox.Location = new System.Drawing.Point(501, 75);
+            this.ComputerPictureBox.Name = "ComputerPictureBox";
+            this.ComputerPictureBox.Size = new System.Drawing.Size(199, 140);
+            this.ComputerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ComputerPictureBox.TabIndex = 25;
+            this.ComputerPictureBox.TabStop = false;
             // 
             // OrderForm
             // 
@@ -612,12 +614,12 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "OrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "OrderForm";
+            this.Text = "Complete Your Order";
             this.Activated += new System.EventHandler(this.OrderForm_Activated);
             this.OrderFormMenuStrip.ResumeLayout(false);
             this.OrderFormMenuStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ComputerPictureBox)).EndInit();
             this.PriceGroupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ComputerPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
