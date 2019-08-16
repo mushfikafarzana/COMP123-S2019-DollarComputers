@@ -24,19 +24,35 @@ namespace COMP123_S2019_Assignment5.Views
             InitializeComponent();
         }
 
+        /// <summary>
+        /// this is the event handler for for the StartANewOrderButton Click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void StartANewOrderButton_Click(object sender, EventArgs e)
         {
             Program.selectForm.Show();
             this.Hide();
-
         }
 
+        /// <summary>
+        /// this is the event handler for for the LoadASavedOrderButton Click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LoadASavedOrderButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Program.productInfoForm.Show();
+            //Program.productInfoForm.OpenFileDialog();
+
+            this.Hide();
         }
 
+        /// <summary>
+        /// this is the event handler for the ExitButton Click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ExitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();

@@ -76,12 +76,18 @@ namespace COMP123_S2019_Assignment5.Views
         /// <param name="e"></param>
         private void ProductInfoForm_Activated(object sender, EventArgs e)
         {
-            //Fill up fields when a product is selected
+            GenerateProductInfo();
+        }
+
+        // Method that generates product information when a product is selected
+        private void GenerateProductInfo()
+        {
             if (Program.product.productID != 0)
             {
                 ProductIDDataLabel.Text = Program.product.productID.ToString();
                 ConditionDataLabel.Text = Program.product.condition;
                 CostDataLabel.Text = ((decimal)Program.product.cost).ToString("C");
+                //CostDataLabel.Text = ($"{Program.product.cost:C2}");
                 PlatformDataLabel.Text = Program.product.platform;
                 OSDataLabel.Text = Program.product.OS;
                 ManufacturerDataLabel.Text = Program.product.manufacturer;
@@ -96,7 +102,7 @@ namespace COMP123_S2019_Assignment5.Views
                 CPUSpeedDataLabel.Text = Program.product.CPU_speed;
                 WebcamDataLabel.Text = Program.product.webcam;
 
-                //Enable Next button after form filled
+                //Enable Next button after the form is filled
                 NextButton.Enabled = true;
             }
         }
@@ -106,7 +112,7 @@ namespace COMP123_S2019_Assignment5.Views
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // configure the file dialog
             ProductInfoSaveFileDialog.FileName = "Product.txt";
@@ -145,6 +151,7 @@ namespace COMP123_S2019_Assignment5.Views
                         outputString.Close();
                         outputString.Dispose();
                     }
+
                     // give feedback to user that file has been saved
                     // this is a modal form
                     MessageBox.Show("File Saved Successfully", "Saving...",
@@ -158,16 +165,22 @@ namespace COMP123_S2019_Assignment5.Views
             }
         }
         /// <summary>
-        /// this is the event handler for the openToolStripMenuItem's Click event
+        /// this is the event handler for the OpenToolStripMenuItem's Click event
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog();
+        }
+
+        // Method that opens a OpenFileDialog box
+        private void OpenFileDialog()
         {
             // configure the file dialog
-            ProductInfoSaveFileDialog.FileName = "Product.txt";
-            ProductInfoSaveFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
-            ProductInfoSaveFileDialog.Filter = "Text Files (*.txt)|*.txt| All Files (*.*)|*.*";
+            ProductInfoOpenFileDialog.FileName = "Product.txt";
+            ProductInfoOpenFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
+            ProductInfoOpenFileDialog.Filter = "Text Files (*.txt)|*.txt| All Files (*.*)|*.*";
 
             // open the file dialog
             var result = ProductInfoSaveFileDialog.ShowDialog();
@@ -177,7 +190,7 @@ namespace COMP123_S2019_Assignment5.Views
                 {
                     // Open stream to read
                     using (StreamReader inputStream = new StreamReader(
-                        File.Open(ProductInfoSaveFileDialog.FileName, FileMode.Open)))
+                        File.Open(ProductInfoOpenFileDialog.FileName, FileMode.Open)))
                     {
                         // Read stuff into the Product class
                         Program.product.productID = short.Parse(inputStream.ReadLine());
@@ -200,9 +213,6 @@ namespace COMP123_S2019_Assignment5.Views
                         // cleanup
                         inputStream.Close();
                         inputStream.Dispose();
-
-                        //automatically click next to next form
-                        NextButton_Click(sender, e);
                     }
                 }
                 catch (IOException exception)
@@ -219,6 +229,7 @@ namespace COMP123_S2019_Assignment5.Views
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            GenerateProductInfo();
         }
     }
 }

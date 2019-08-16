@@ -79,7 +79,7 @@
             this.GPUTypeDataLabel = new System.Windows.Forms.Label();
             this.WebcamDataLabel = new System.Windows.Forms.Label();
             this.OSDataLabel = new System.Windows.Forms.Label();
-            this.SalexTaxDataLabel = new System.Windows.Forms.Label();
+            this.SalesTaxDataLabel = new System.Windows.Forms.Label();
             this.TotalDataLabel = new System.Windows.Forms.Label();
             this.ComputerPictureBox = new System.Windows.Forms.PictureBox();
             this.PriceGroupBox = new System.Windows.Forms.GroupBox();
@@ -118,7 +118,7 @@
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.printToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.printToolStripMenuItem.Text = "&Print";
-            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
+            this.printToolStripMenuItem.Click += new System.EventHandler(this.PrintToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -126,7 +126,7 @@
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -176,7 +176,7 @@
             this.aboutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.aboutToolStripMenuItem.Text = "&About...";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
             // ProductPrintForm
             // 
@@ -204,7 +204,7 @@
             this.CancelButton.TabIndex = 2;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = false;
-            this.CancelButton.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.CancelButton.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // BackButton
             // 
@@ -514,13 +514,13 @@
             this.OSDataLabel.Size = new System.Drawing.Size(358, 24);
             this.OSDataLabel.TabIndex = 39;
             // 
-            // SalexTaxDataLabel
+            // SalesTaxDataLabel
             // 
-            this.SalexTaxDataLabel.BackColor = System.Drawing.Color.White;
-            this.SalexTaxDataLabel.Location = new System.Drawing.Point(211, 72);
-            this.SalexTaxDataLabel.Name = "SalexTaxDataLabel";
-            this.SalexTaxDataLabel.Size = new System.Drawing.Size(156, 22);
-            this.SalexTaxDataLabel.TabIndex = 40;
+            this.SalesTaxDataLabel.BackColor = System.Drawing.Color.White;
+            this.SalesTaxDataLabel.Location = new System.Drawing.Point(211, 72);
+            this.SalesTaxDataLabel.Name = "SalesTaxDataLabel";
+            this.SalesTaxDataLabel.Size = new System.Drawing.Size(156, 22);
+            this.SalesTaxDataLabel.TabIndex = 40;
             // 
             // TotalDataLabel
             // 
@@ -544,7 +544,7 @@
             this.PriceGroupBox.Controls.Add(this.PriceLabel);
             this.PriceGroupBox.Controls.Add(this.TotalDataLabel);
             this.PriceGroupBox.Controls.Add(this.SalesTaxLabel);
-            this.PriceGroupBox.Controls.Add(this.SalexTaxDataLabel);
+            this.PriceGroupBox.Controls.Add(this.SalesTaxDataLabel);
             this.PriceGroupBox.Controls.Add(this.TotalLabel);
             this.PriceGroupBox.Controls.Add(this.PriceDataLabel);
             this.PriceGroupBox.Controls.Add(this.shapeContainer2);
@@ -613,6 +613,7 @@
             this.Name = "OrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderForm";
+            this.Activated += new System.EventHandler(this.OrderForm_Activated);
             this.OrderFormMenuStrip.ResumeLayout(false);
             this.OrderFormMenuStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ComputerPictureBox)).EndInit();
@@ -675,7 +676,7 @@
         private System.Windows.Forms.Label WebcamDataLabel;
         private System.Windows.Forms.Label OSDataLabel;
         private System.Windows.Forms.Label TotalDataLabel;
-        private System.Windows.Forms.Label SalexTaxDataLabel;
+        private System.Windows.Forms.Label SalesTaxDataLabel;
         private System.Windows.Forms.GroupBox PriceGroupBox;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
     }
